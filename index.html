@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0b1230">
+<title>عالم مهدي: مغامرات المعرفة</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage">
+    <canvas id="game" width="1080" height="1920"></canvas>
+
+    <div id="hud" hidden>
+      <div class="hud-row">
+        <div class="hud-left">
+          <button id="btn-pause" class="round" aria-label="إيقاف مؤقت" data-act="pause">II</button>
+          <button id="btn-mute" class="round" aria-label="الصوت">♪</button>
+        </div>
+        <div class="hud-right">
+          <div id="hud-keys" class="pill" aria-label="مفاتيح المعرفة"></div>
+          <div id="hud-sparks" class="pill"><span class="spark-ico"></span><b id="hud-sparks-n">0</b></div>
+        </div>
+      </div>
+      <div id="hud-energy" class="energy" hidden><span class="lbl">الطاقة</span><div class="bar"><i id="hud-energy-fill"></i></div></div>
+      <div id="hud-stage" class="stagename"></div>
+      <div id="hud-goal" class="goal"></div>
+      <div id="hud-powers"></div>
+    </div>
+
+    <div id="prompt" hidden></div>
+
+    <div id="controls" hidden>
+      <div class="pad-move">
+        <button class="ctl" data-act="left" aria-label="يسار">‹</button>
+        <button class="ctl" data-act="right" aria-label="يمين">›</button>
+      </div>
+      <div class="pad-act">
+        <button class="ctl small only-lesson" data-act="transform" id="ctl-transform" aria-label="تحوّل">تحوّل</button>
+        <button class="ctl small only-lesson" data-act="interact" aria-label="تفاعل">تفاعل</button>
+        <button class="ctl big atk only-action" data-act="attack" id="ctl-attack" aria-label="هجوم">هجوم</button>
+        <button class="ctl big" data-act="jump" aria-label="قفز">قفز</button>
+      </div>
+    </div>
+
+    <div id="overlay" hidden></div>
+    <div id="fade"></div>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
